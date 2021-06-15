@@ -1,15 +1,17 @@
 var bg,bg2,form,system,code,security;
-var score=0;
+var score = 0;
+var font;
 
 function preload() {
   bg = loadImage("aladdin_cave.jpg");
-  bg2 = loadImage("treasure.jpg")
+  bg2 = loadImage("treasure.jpg");
+  font = loadFont("AEA.TTF");
 }
 
 function setup() {
   createCanvas(1000,500);
-  system = new System()
-  security = new Security()
+  system = new System();
+  security = new Security();
 }
 
 function draw() {
@@ -21,12 +23,13 @@ function draw() {
   text("Score: " + score, 450, 50);
 
   if(score === 3) {
-    clear()
-    background(bg2)
-    fill("black")
+    clear();
+    background(bg2);
+    textFont(font);
+    fill(255);
     textSize(40);
-    text("TREASURE UNLOCKED",250, 200);
+    text("TREASURE UNLOCKED",100, 200);
   }
 
-  drawSprites()
+  drawSprites();
 }
