@@ -27,7 +27,7 @@ function draw() {
     background(bg2);
     textFont(font);
     fill(255);
-    textSize(40);
+    textSize(60);
     text("TREASURE UNLOCKED",100, 200);
   }
 
